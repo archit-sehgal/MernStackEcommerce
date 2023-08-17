@@ -53,7 +53,6 @@ function Form() {
             }).then((res) => {
               res.json().then((data) => {
                 if (data.token) {
-                  // Navigate to the admin login page using navigate
                   localStorage.setItem("token", data.token);
                   window.location = "/admin/products";
                 }

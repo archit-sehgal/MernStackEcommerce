@@ -13,7 +13,7 @@ function SpecificProduct() {
     if (existingProduct) {
       existingProduct.count = newCount;
     } else {
-      cartData.push({ id, count: newCount });
+      cartData.push({ id:id, count: newCount,productName:product.productName,imageLink:product.imageLink,price:product.price});
     }
     localStorage.setItem("cartData", JSON.stringify(cartData));
 
