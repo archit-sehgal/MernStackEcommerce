@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 
 function NavComp() {
   const cartfetch = localStorage.getItem("cartCount");
-  const isCartEmpty = cartfetch === "0";
+  const isCartEmpty = cartfetch === "0"||0;
 
   const [cartCount, setCartCount] = useState(0);
   const [adminId, setAdminId] = useState(null);
@@ -31,12 +31,11 @@ function NavComp() {
         setCartCount(Number(storedCartCount));
       }
     }, 1000);
-
+  
     return () => {
       clearInterval(interval);
     };
   }, []);
-
   if (adminId) {
     return (
       <div className="nav flex">
