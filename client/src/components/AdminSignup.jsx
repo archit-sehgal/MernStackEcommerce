@@ -35,7 +35,7 @@ function AdminSignup() {
             disabled={isLoginDisabled}
             variant="contained"
             onClick={() => {
-              fetch("http://localhost:3000/admin/signup", {
+              fetch("https://jerseystore-two.vercel.app/admin/signup", {
                 method: "POST",
                 body: JSON.stringify({
                   adminId: adminId,
