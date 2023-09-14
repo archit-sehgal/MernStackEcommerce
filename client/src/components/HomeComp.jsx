@@ -4,7 +4,7 @@ function HomeComp() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://jerseystore-two.vercel.app/", {
+    fetch("http://localhost:3000/", {
       methop: "GET",
       headers: {
         "content-type": "application/json",
@@ -15,7 +15,7 @@ function HomeComp() {
       });
     });
     setInterval(() => {
-      fetch("https://jerseystore-two.vercel.app/", {
+      fetch("http://localhost:3000/", {
         methop: "GET",
         headers: {
           "content-type": "application/json",

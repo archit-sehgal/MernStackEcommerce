@@ -54,7 +54,7 @@ function Form() {
           disabled={isLoginDisabled}
           variant="contained"
           onClick={() => {
-            fetch("https://jerseystore-two.vercel.app/admin/products", {
+            fetch("http://localhost:3000/admin/products", {
               method: "POST",
               body: JSON.stringify({
                 productName: productName,

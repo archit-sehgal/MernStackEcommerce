@@ -10,7 +10,7 @@ function NavComp() {
   const [adminId, setAdminId] = useState(null);
 
   useEffect(() => {
-    fetch("https://jerseystore-two.vercel.app/admin/me", {
+    fetch("http://localhost:3000/admin/me", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),

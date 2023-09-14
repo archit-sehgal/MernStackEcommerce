@@ -22,7 +22,7 @@ function SpecificProduct() {
   };
 
   useEffect(() => {
-    fetch("https://jerseystore-two.vercel.app/" + id, {
+    fetch("http://localhost:3000/" + id, {
       method: "GET",
       headers: {
         "content-type": "application/json",
