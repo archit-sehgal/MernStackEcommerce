@@ -26,6 +26,9 @@ mongoose.connect("mongodb+srv://architsehgal:Architgr8@test.hnsjox4.mongodb.net/
     console.error("Error connecting to MongoDB:", error);
 });
 
-app.listen(3000,function(){
-    console.log("server started on port no 3000")
-})
+
+const Port = process.env.port || 8080;
+
+app.listen(Port, () => {
+    console.log("Server started on port " + Port);
+});
