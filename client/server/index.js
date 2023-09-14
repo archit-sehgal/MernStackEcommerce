@@ -27,7 +27,7 @@ mongoose.connect("mongodb+srv://architsehgal:Architgr8@test.hnsjox4.mongodb.net/
 });
 
 
-const Port = process.env.port || 8080;
+const Port = process.env.port || 3000;
 
 app.listen(Port, () => {
     console.log("Server started on port " + Port);
