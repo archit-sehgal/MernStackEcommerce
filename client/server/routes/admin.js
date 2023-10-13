@@ -22,7 +22,7 @@ router.post("/signup",async(req,res)=>{
             password:password
         })
         await newAdmin.save()
-        const token=jwt.sign({adminId,password},secretKey,{expiresIn:"1hr"})
+        const token=jwt.sign({adminId,password},secretKey)
         res.json({message:"admin created successfully",token})
     }else{
         res.status(404).json("admin already exist")
@@ -33,7 +33,7 @@ router.post("/login",authenticateJwt,async(req,res)=>{
     const{adminId,password}=req.body;
     const existingAdmin=await Admin.findOne({adminId:adminId,password:password})
     if(existingAdmin){
-        const token=jwt.sign({adminId,password},secretKey,{expiresIn:"1hr"});
+        const token=jwt.sign({adminId,password},secretKey);
         res.json({message:"admin logged in",token})
     }
     else{
