@@ -29,7 +29,7 @@ router.post("/signup",async(req,res)=>{
     }
 })
 // admin login
-router.post("/login",authenticateJwt,async(req,res)=>{
+router.post("/login",async(req,res)=>{
     const{adminId,password}=req.body;
     const existingAdmin=await Admin.findOne({adminId:adminId,password:password})
     if(existingAdmin){
