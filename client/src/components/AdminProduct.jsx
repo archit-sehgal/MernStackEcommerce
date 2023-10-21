@@ -54,7 +54,7 @@ function Form() {
           disabled={isLoginDisabled}
           variant="contained"
           onClick={() => {
-            fetch("http://localhost:3000/admin/products", {
+            fetch("https://jerseystore.onrender.com/admin/products", {
               method: "POST",
               body: JSON.stringify({
                 productName: productName,

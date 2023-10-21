@@ -22,7 +22,7 @@ function SpecificProduct() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/" + id, {
+    fetch("https://jerseystore.onrender.com/" + id, {
       method: "GET",
       headers: {
         "content-type": "application/json",

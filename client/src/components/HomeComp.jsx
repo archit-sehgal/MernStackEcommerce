@@ -4,7 +4,7 @@ function HomeComp() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/", {
+    fetch("https://jerseystore.onrender.com/", {
       methop: "GET",
       headers: {
         "content-type": "application/json",
@@ -15,7 +15,7 @@ function HomeComp() {
       });
     });
     setInterval(() => {
-      fetch("http://localhost:3000/", {
+      fetch("https://jerseystore.onrender.com/", {
         methop: "GET",
         headers: {
           "content-type": "application/json",

@@ -10,7 +10,7 @@ function NavComp() {
   const [adminId, setAdminId] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/admin/me", {
+    fetch("https://jerseystore.onrender.com/admin/me", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -51,6 +51,7 @@ function NavComp() {
                 localStorage.setItem("token", null);
                 localStorage.setItem("cartCount", 0);
                 localStorage.removeItem("cartData");
+                window.location="/"
               }}
             >
               logout
