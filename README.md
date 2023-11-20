@@ -25,3 +25,5 @@ Efficient State Management: React's state management capabilities are leveraged 
 User-Friendly Navigation: A navigation bar helps users explore the app effortlessly, with clear links to the home page, cart, and user account features.
 
 Secure Payment Handling: While not implemented in this code snippet, future enhancements could include integrating secure payment processing using popular payment gateways.
+<b>Live Link:</b>
+https://mern-stack-ecommerce-sand.vercel.app/
